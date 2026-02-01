@@ -51,12 +51,13 @@ em {font-style:normal;}
 .sns_wrap li:not(:last-child) {margin-right:60px;}
 .sns_wrap li a {display:block; color:#fff;}
 .product_text {position:absolute; top:50%; left:0; transform:translateY(-50%); width:100%; text-align:center; color:#fff; z-index:2;}
-.product_title {font-size:90px; font-weight:400; margin-bottom:30px; letter-spacing:2px;}
+.product_title {display:inline-block; font-size:90px; font-weight:600; margin-bottom:30px; letter-spacing:2px; background: linear-gradient(90deg, #D3D9DD 10%, #363a5e 100%);
+-webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 .product_subtitle {font-size:19px; font-weight:500;}
 .ellipse-container {position:absolute; top:50%; left:50%; width:458px; height:458px; transform:translate(-50%, -50%); border-radius:50%; background:#D3D9DD; z-index:1;}
 .ellipse {position:absolute; top:0; border-radius:50%; border-style:solid;}
 .ellipse.thin {width:100%; height:100%; border-width:1px; border-color:#494949; opacity:.5;}
-.ellipse.thick {top:50%; left:50%; width:93%; height:93%; border-width:10px; border-color:#fdfdfd; transform:translate(-50%, -50%);}
+.ellipse.thick {top:50%; left:50%; width:93%; height:93%; border-width:10px; border-color:#efefef; transform:translate(-50%, -50%);}
 .ellipse.blue {top:6px; left:6px; width:93%; height:93%; border-width:10px; border-color:#363a5e transparent; transform:rotate(-45deg); 
 animation:ellipseRotate 15s ease-in-out infinite;}
 .circle1, .circle2 {position:absolute; border-style:solid; width:64px; height:64px; border-width:1px; border-color:#D3D9DD; border-radius:50%;}
@@ -134,12 +135,13 @@ background:url('../images/light.png') no-repeat center / 100%; animation:light 1
 }
 
 /* career */
-.career {position:relative; padding:200px 0;}
-.career .tit {position:fixed; top:50%; left:0; transform:translateY(-50%); display:block; text-align:center; width:100%; z-index:-1;
-font-size:35px; color:#363A5D; opacity:.5; letter-spacing:20px; font-weight:500; visibility:hidden;}
-.career .tit.visa {visibility:visible;}
+.career {position:relative; padding:100px 0 150px;}
+.career .tit {font-size:35px; color:#111; letter-spacing:20px; font-weight:700; margin-bottom:25px;}
+.career .bg_tit {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:inline-block;z-index:-1; width:100%; text-align:center;
+font-size:9.5vw; color:transparent; opacity:.5; font-weight:800; -webkit-text-stroke: 2px #363A5D;}
+.career .bg_tit .margin {display:inline-block; margin:0 2.5vw;}
 .career_list {position:relative;}
-.career_list:before {content:''; position:absolute; top:50%; left:0; right:0; margin:0 auto; transform:translateY(-50%); width:4px; height:120%; background:#363A5D;}
+.career_list:before {content:''; position:absolute; top:50%; left:0; right:0; margin:0 auto; transform:translateY(-50%); width:4px; height:100%; background:#363A5D;}
 .career_list li {position:relative;}
 .career_list li:before {content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:15px; height:15px;
 border:10px solid #D3D9DD; border-radius:50%; background:#fff;}
@@ -162,7 +164,7 @@ border:10px solid #D3D9DD; border-radius:50%; background:#fff;}
 .section_line.mid {left:50%;}
 .section_line.right {left:75%;}
 .ex_con {position:relative;}
-.ex_left {position:absolute; top:350px; left:0; width:calc(35% - 30px); padding-right:30px; color:#fff; word-break:keep-all; 
+.ex_left {position:absolute; top:0; left:0; width:calc(35% - 30px); color:#fff; word-break:keep-all; 
 transform:translateX(-50px); transition:.5s ease-in-out; opacity:0; visibility:hidden;}
 .ex_left h3 {font-size:23px; letter-spacing:3px; opacity:.7; font-weight:500;}
 .ex_left strong {display:block; font-size:26px; font-weight:500; margin:20px 0 80px;}
@@ -199,7 +201,7 @@ transform:translateX(-50px); transition:.5s ease-in-out; opacity:0; visibility:h
 	}
 }
 .pf_txt {margin-top:20px; word-break:keep-all;}
-.pf_txt p {font-size:23px; color:#fff; font-weight:500;}
+.pf_txt h4 {font-size:23px; color:#fff; font-weight:500;}
 .pf_txt span {display:block; font-size:16px; color:#ddd; letter-spacing:2px; margin-top:10px;}
 .experience.on .ex_left {transform:translateX(0); opacity:1; visibility:visible;}
 .pf_list.on {opacity:1; visibility:visible;}
@@ -252,8 +254,6 @@ border-left:2px solid #363A5D; border-top:2px solid #363A5D; z-index:1;}
 .top_btn a .left-box .box-in {left: 100%; transform-origin: 0 50%;}
 .top_btn a .right-box .box-in {right: 100%; transform-origin: 100% 50%;}
 
-
-
 @media screen and (min-width:1025px) and (max-width:1449px) {
     .inner {width:calc(100% - 6%); padding:0 3%;}
     
@@ -305,7 +305,8 @@ border-left:2px solid #363A5D; border-top:2px solid #363A5D; z-index:1;}
     .about .about_txt p {font-size:16px; line-height:30px;}
 
     /* career */
-    .career {padding:150px 0;}
+    .career .tit {margin-bottom:45px;}
+    .career .bg_tit {font-size:19vw;}
     .career_list li:nth-child(odd) div {margin-right:50px;}
     .career_list li:nth-child(even) div {margin-left:50px;}
     .career_list li em {font-size:20px;}
@@ -318,7 +319,7 @@ border-left:2px solid #363A5D; border-top:2px solid #363A5D; z-index:1;}
     .ex_right {padding-left:0; margin-top:70px;}
     .ex_left p {font-size:16px; line-height:30px;}
     .pf_list {margin-right:9%;}
-    .pf_txt p {font-size:22px;}
+    .pf_txt h4 {font-size:22px;}
     .pf_txt span {margin-top:7px;}
 
     /* contact */
@@ -376,9 +377,9 @@ border-left:2px solid #363A5D; border-top:2px solid #363A5D; z-index:1;}
     .about .about_txt p {font-size:13px; line-height:25px;}
 
     /* career */
-    .career {padding:100px 0;}
-    .career_list:before {height:110%;}
-    .career .tit {font-size:27px;}
+    .career {padding:70px 0 100px;}
+    .career .tit {font-size:27px; margin-bottom:45px;}
+    .career .bg_tit {font-size:19vw;}
     .career_list:before {left:auto; right:7px;}
     .career_list li + li {margin-top:70px;}
     .career_list li:nth-child(odd) {padding-right:50px;}
@@ -403,7 +404,7 @@ border-left:2px solid #363A5D; border-top:2px solid #363A5D; z-index:1;}
     .pf_list:nth-child(2n) {top:0; margin-right:0;}
     .pf_list:nth-child(-n+2) {margin-top:50px;}
     .pf_list:before {content:none;}
-    .pf_txt p {font-size:20px;}
+    .pf_txt h4 {font-size:20px;}
     .pf_txt span {font-size:14px; margin-top:5px;}
 
     /* contact */
