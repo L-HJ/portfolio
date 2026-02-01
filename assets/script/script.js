@@ -36,14 +36,14 @@ $(document).ready(function(){
         experienceOffset = $('.experience').offset().top;
         aboutOffset = about.offset().top;
         if(winTop > aboutOffset && winTop < experienceOffset) {
-            $('.career .tit').addClass('visa');
+            $('.career .bg_tit').addClass('visa');
         } else {
-            $('.career .tit').removeClass('visa');
+            $('.career .bg_tit').removeClass('visa');
         };
 
         // experience 스크롤 효과
         let experience = $('.experience');
-        experienceOffset = experience.offset().top - 400;
+        experienceOffset = experience.offset().top - 700;
         if(winTop >= experienceOffset){
             experience.addClass('on');
         } else {
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
         // experience 리스트 스크롤 효과
         $('.experience .pf_list').each(function(){
-            if(winTop >= $(this).offset().top - 550){
+            if(winTop >= $(this).offset().top - 700){
                 $(this).addClass('on');
             } else {
                 $(this).removeClass('on');
