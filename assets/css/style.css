@@ -293,7 +293,7 @@ border-left:2px solid #363A5D; border-top:2px solid #363A5D; z-index:1;}
     .sns_wrap li:nth-child(3) a {background-image:url('../images/kakao.png');}
     .sns_wrap li:nth-child(4) a {background-image:url('../images/insta.png');}
     .sns_wrap li a span {display:none;}
-    .product_title {font-size:72px;}
+    .product_title {font-size:85px;}
     .ellipse-container {width:550px; height:550px;}
     .ellipse.blue {top:9px; left:9px;}
     .circle1, .circle2 {display:none;}
@@ -360,7 +360,7 @@ border-left:2px solid #363A5D; border-top:2px solid #363A5D; z-index:1;}
     .sns_wrap li:nth-child(3) a {background-image:url('../images/kakao.png');}
     .sns_wrap li:nth-child(4) a {background-image:url('../images/insta.png');}
     .sns_wrap li a span {display:none;}
-    .product_title {font-size:38px; margin-bottom:0; letter-spacing:0;}
+    .product_title {font-size:11vw; margin-bottom:0; letter-spacing:0;}
     .product_subtitle {display:none;}
     .ellipse-container {width:308px; height:308px;}
     .ellipse.thick {width:89%; height:89%;}
