@@ -156,7 +156,8 @@ border:10px solid #D3D9DD; border-radius:50%; background:#fff;}
 .career_list li p span {display:block; font-size:18px; font-weight:500; margin-bottom:5px;}
 .career.on .career_list li div {transform:rotateY(0);}
 .career.on .career_list li:nth-child(2) div {transition-delay:.3s;}
-.career.on .career_list li:last-child div {transition-delay:.6s;}
+.career.on .career_list li:nth-child(3) div {transition-delay:.6s;}
+.career.on .career_list li:last-child div {transition-delay:.9s;}
 
 /* Experience */
 .experience {position:relative; background:#363A5D; padding:230px 0;}
