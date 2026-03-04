@@ -2,17 +2,7 @@ $(document).ready(function(){
     
     // 스크롤 이벤트
     $(window).scroll(function(){
-        let winTop = $(window).scrollTop();
-
-        // 헤더 색상 변경
-        let careerOffset = $('.career').offset().top - 100;
-        let experienceOffset = $('.experience').offset().top - 100;
-
-        if(winTop > careerOffset && winTop < experienceOffset) {
-            $('.nav, .menu_btn').addClass('blue');
-        } else {
-            $('.nav, .menu_btn').removeClass('blue');
-        };
+        let winTop = $(window).scrollTop();        
         
         // about 스크롤 효과
         let about = $('.about');
@@ -25,7 +15,7 @@ $(document).ready(function(){
 
         // career 스크롤 효과
         let career = $('.career');
-        careerOffset = career.offset().top - 400;
+        let careerOffset = career.offset().top - 400;
         if(winTop >= careerOffset){
             career.addClass('on');
         } else {
@@ -33,7 +23,7 @@ $(document).ready(function(){
         };
 
         // career 텍스트 show/hide
-        experienceOffset = $('.experience').offset().top;
+        let experienceOffset = $('.experience').offset().top;
         aboutOffset = about.offset().top;
         if(winTop > aboutOffset && winTop < experienceOffset) {
             $('.career .bg_tit').addClass('visa');
@@ -77,6 +67,15 @@ $(document).ready(function(){
         }else{//절반 미만이면
             $('.top_btn .left-box .box-in').attr('style', 'transform: rotate(0deg);');
             $('.top_btn .right-box .box-in').attr('style', 'transform: rotate(' + (winTop/(h - winh) * 360) + 'deg);');
+        }
+
+        // 헤더 색상 변경
+        let section01Offset = $('.section1').offset().top - 200;
+        let section02Offset = $('.section4').offset().top - 200;
+        if(winTop < section01Offset){
+            $('.nav, .menu_btn').removeClass('blue');
+        } else if (winTop >= section01Offset && winTop < section02Offset){
+            $('.nav, .menu_btn').addClass('blue');
         }
     });
 
